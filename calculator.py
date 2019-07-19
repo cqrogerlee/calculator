@@ -21,11 +21,19 @@ while True:
     if b.lower()=='q':
         break
 
-    a = int(a)
-    b = int(b)
+    try:
+        a = int(a)
+        b = int(b)
+       
+        print('a + b =',add(a,b))
+        print('a - b =',substract(a,b))
+        print('a * b =',multiply(a,b))
+        print('a / b =',divide(a,b))
+    except ValueError:
+        print('Data convert Error !')
+        continue
+    except ZeroDivisionError:
+        print('Zero division Error !')
+        continue
 
-    print('a + b =',add(a,b))
-    print('a - b =',substract(a,b))
-    print('a * b =',multiply(a,b))
-    print('a / b =',divide(a,b))
     
